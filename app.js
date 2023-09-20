@@ -7,6 +7,9 @@ const app = express();
 // expressセッティング
 app.set("view engine", "ejs");
 
+// セキュリティ対策
+app.disable("x-powered-by");
+
 app.use(favicon(path.join(__dirname, "/public/favicon.ico")));
 // Staticファイルの読み込み
 // __dirnameは現在のディレクトリを表す
